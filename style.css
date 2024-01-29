@@ -244,7 +244,7 @@ body {
     margin-top: 10px;
     font-size: 14px;
     text-align: center;
-    color: #fff;
+    color: red;
 }
 
 
@@ -311,9 +311,10 @@ body {
     }
 
     .circle {
-        width: 110px;
-        height: 110px;
-        margin: 10px;
+        width: 90px;
+        height: 90px;
+        margin: 20px;
+        margin: bottom 10px, i !important;
     }
 
     .circle-container {
