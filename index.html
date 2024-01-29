@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <!-- Link Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+
+    <!-- Link Slick Theme CSS (Optional) -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+        <img src="Images/FOA Logo .png" alt="Your Logo">
+      </a>
+              </a>
+        </div>
+        <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="LAP.html">Admission Info</a></li>
+            <li><a href="homeloan.html">About Us</a></li>
+            <li><a href="LAS.html">Virtual Tour</a></li>
+            <li><a href="business.html">Facilities</a></li>
+            <li><a href="workingcapital.html">Contact</a></li>
+            <li><a href="workingcapital.html">Login</a></li>
+        </ul>
+    </nav>
+    <div class="topper-section">
+        <img src="Images/main image.avif" alt="Topper Image">
+        <div class="topper-content">
+            <h1>Your Text Here</h1>
+            <p>Additional description if needed.</p>
+            <a href="#" class="btn">Contact Us</a>
+        </div>
+    </div>
+     <!-- Fort Section -->
+     <div class="fort-section">
+        <!-- Heading -->
+        <h1 class="section-heading">Your Section Heading</h1>
+
+        <!-- Circle Container - First Row -->
+        <div class="circle-container">
+            <div class="circle-wrapper" onmouseover="startHoverTimer('Info for Circle 1')" onmouseout="clearHoverTimer()">
+                <a class="circle" onclick="showPopup('Info for Circle 1')">1</a>
+                <span class="circle-text">Text for Circle 1</span>
+            </div>
+            <div class="circle-wrapper" onmouseover="startHoverTimer('Info for Circle 1')" onmouseout="clearHoverTimer()">
+                <a  class="circle" onclick="showPopup('Info for Circle 1')">2</a>
+                <span class="circle-text">Text for Circle 1</span>
+            </div>
+            <div class="circle-wrapper" onmouseover="startHoverTimer('Info for Circle 1')" onmouseout="clearHoverTimer()">
+                <a  class="circle" onclick="showPopup('Info for Circle 1')">3</a>
+                <span class="circle-text">Text for Circle 1</span>
+            </div>
+            <div class="circle-wrapper" onmouseover="startHoverTimer('Info for Circle 1')" onmouseout="clearHoverTimer()">
+                <a class="circle" onclick="showPopup('Info for Circle 1')">3</a>
+                <span class="circle-text">Text for Circle 1</span>
+            </div>
+        </div>
+
+        <!-- Circle Container - Second Row -->
+        <div class="circle-container">
+            <div class="circle-wrapper" onmouseover="startHoverTimer('Info for Circle 1')" onmouseout="clearHoverTimer()">
+                <a class="circle" onclick="showPopup('Info for Circle 1')">1</a>
+                <span class="circle-text">Text for Circle 1</span>
+            </div>
+            <div class="circle-wrapper" onmouseover="startHoverTimer('Info for Circle 1')" onmouseout="clearHoverTimer()">
+                <a class="circle" onclick="showPopup('Info for Circle 1')">1</a>
+                <span class="circle-text">Text for Circle 1</span>
+            </div>
+            <div class="circle-wrapper" onmouseover="startHoverTimer('Info for Circle 1')" onmouseout="clearHoverTimer()">
+                <a  class="circle" onclick="showPopup('Info for Circle 1')">1</a>
+                <span class="circle-text">Text for Circle 1</span>
+            </div>
+            <div class="circle-wrapper" onmouseover="startHoverTimer('Info for Circle 1')" onmouseout="clearHoverTimer()">
+                <a  class="circle" onclick="showPopup('Info for Circle 1')">1</a>
+                <span class="circle-text">Text for Circle 1</span>
+            </div> 
+            
+        </div>
+    </div>  
+    <div id="popup" class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <div class="popup-content" id="popupContent">
+            <!-- Pop-up content goes here -->
+        </div>
+    </div>
+    <div class="overlay" onclick="closePopup()"></div>
+
+    <div class="two-column-section">
+        <div class="column buttons-column">
+            <div class="button-row">
+                <a href="button1.html" class="button">Button 1</a>
+                <a href="button2.html" class="button">Button 2</a>
+            </div>
+            <a href="button3.html" class="button full-width">List of items to be brought by student</a>
+            <div class="button-row">
+                <a href="button4.html" class="button">Button 4</a>
+                <a href="button5.html" class="button">Button 5</a>
+            </div>
+        </div>
+        <div class="column notifications-column">
+            <p>Notification 1: Lorem ipsum dolor sit amet.</p>
+            <p>Notification 2: consectetur adipiscing elit.</p>
+            <p>Notification 3: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+    <section class="services-container" id="services-section">
+        <div class="services">
+            <div class="service-card">
+                <div class="service-heading">Principal's Message</div>
+                <img src="https://plus.unsplash.com/premium_photo-1661775434014-9c0e8d71de03?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8b2ZmaWNlfGVufDB8fDB8fHww" alt="Consultation">
+                <h3>Principal's Message</h3>
+                <p>Infotmation about the Principal Message</p>
+            </div>
+    
+            <div class="service-card">
+                <div class="service-heading">Gallery</div>
+                <img src="https://media.istockphoto.com/id/1136807674/photo/hes-a-diligent-worker.jpg?s=612x612&w=0&k=20&c=D_gkckb6b9qIFVyv2cKz6Qb3Ui-Bow0kHwAqUNeRDi8=" alt="Documentation / Bank Process">
+                <h3>Gallery</h3>
+                <p>Contain diffrent photos of school</p>
+            </div>
+    
+            <div class="service-card">
+                <div class="service-heading">Schools</div>
+                <img src="https://img.freepik.com/free-photo/side-view-cropped-unrecognizable-business-people-working-common-desk_1098-20474.jpg?size=626&ext=jpg&ga=GA1.1.1448711260.1706227200&semt=ais" alt="Disbursal">
+                <h3>Schools</h3>
+                <p>diffrent schools</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="Images/FOA Logo .png" alt="Your Logo">
+                </a>
+                <p>Tagline added here</p> <!-- Tagline added here -->
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="LAP.html">Admission Info</a></li>
+                    <li><a href="homeloan.html">About Us</a></li>
+                    <li><a href="LAS.html">Virtual Tour</a></li>
+                    <li><a href="business.html">Facilities</a></li>
+                    <li><a href="workingcapital.html">Contact</a></li>
+                    <li><a href="workingcapital.html">Login</a></li>
+                    <!-- Add other links as needed -->
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h4>Contact Information</h4>
+                <p>Phone: +91 </p>
+                <p>Email: </p>
+                <p>Add</p>
+            </div>
+        </div>
+        <div class="footer-bottom"> 
+            <div class="footer-nav-links">  
+                <a href="aboutus.html">About Us</a>
+                <a href="contactus.html">Contact Us</a>
+                <a href="index.html">Home</a>
+                <!-- Add more links as needed -->
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2023 Grothify. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
