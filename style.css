@@ -57,11 +57,13 @@ body {
     border: 2px solid white;
     border-radius: 25px;
     padding: 8px 15px;
+    
 }
 
 .nav-links li a:hover {
     color: #4169E1;
     position: relative;
+    
 }
 
 .nav-links li a:hover::before {
@@ -70,12 +72,13 @@ body {
     top: -30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #fff;
+    /* background-color: #fff; */
     color: #043353;
     padding: 5px 10px;
     border-radius: 5px;
     opacity: 0;
     transition: all 0.3s ease;
+    
 }
 
 .nav-links li a:hover::before {
@@ -209,6 +212,7 @@ body {
     font-size: 2em;
     margin-bottom: 20px;
     top: 0%;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .circle-container {
@@ -222,29 +226,59 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 }
 
 .circle {
+    position: relative;
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 2px solid #4169E1;
-    color: #4169E1;
-    font-size: 1.5em;
+    border: 2px solid #040c53;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px 60px;
     cursor: pointer;
     transition: background-color 0.5s ease, transform 0.5s ease;
-    text-decoration: none;
+    text-decoration: none;  
+    background-size: contain;
+    background-position: center; 
+    z-index: 1;
+    
+}
+.number{
+    z-index: 3;
+    font-size: 2em;
+    font-weight: bolder;
+}
+.circle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    border-radius: inherit;
+    background-color: #040c53; /* Change to the desired color */
+    opacity: 0.6; /* Adjust the opacity (last value) as needed */
+    z-index: 2;
+    font-size: 20px;
+    transition: opacity 0.3s ease; 
+    
+}
+.circle:hover::before {
+    opacity: 0; /* Make it fully transparent on hover */
 }
 
 .circle-text {
     margin-top: 10px;
     font-size: 14px;
     text-align: center;
-    color: red;
+    color: #040c53;
+    font-weight: bolder;
 }
 
 
@@ -338,7 +372,7 @@ body {
     display: flex;
     background-color: #043353   ;
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     padding: 2vw 3vw;
     
 }
@@ -347,6 +381,8 @@ body {
     flex-basis: 48%;
     display: flex;
     flex-direction: column;
+    background-color: #D7DEE4;
+    scale: 0.9;
 
 }
 
@@ -357,14 +393,17 @@ body {
     
 }
 .button{
-    padding: 2vw 7vw;
-    background-color: yellow;
+    padding: 2vw 6vw;
+    background-color: #040c53;
     margin-block: 3vw;
-    border-radius: 1vw;
+    /* border-radius: 1vw; */
     text-decoration: none; 
     color: #000000;  
     transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
     scale: 0.9;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #fff;
 }
 .button:hover {
     background-color: #e91616;
@@ -381,6 +420,8 @@ body {
     margin-block: 0vw;
     scale: 0.9;
     transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+    font-size: 18px;
+    font-weight: bolder;
     
     /* margin-top: 5vw; */
 }
@@ -394,7 +435,7 @@ body {
     color: #000000;
     
 }
-.column notifications-column{
+/* .column notifications-column{
     flex-basis: 48%;
     display: flex;
     flex-direction: column;
@@ -408,10 +449,69 @@ body {
     text-decoration: none; 
     scale: 0.9;
     transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+} */
+.ideaboxNewswrp h1 {
+    color: #fff;
+    text-align: center;
+    text-transform:uppercase ;
+
 }
-.notifications-column p:hover{
+/* .notifications-column p:hover{
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     transform: scale(1.05);
+} */
+.ideaboxNewswrp{
+    flex-basis: 48%;
+    display: flex;
+    flex-direction: column;
+    margin: 2vw;
+}
+.ideaboxNewswrp ul li {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    padding-right: 15px;
+    background: #040c53;
+    border-bottom: 1px dashed #000000;
+    box-sizing: border-box;
+    padding: 10px 0 10px 22px;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    font-size: 15px;
+    scale: 0.8;
+
+}
+
+.ideaboxNewswrp ul li .in-content {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    font-size: 15px;
+}
+
+.ideaboxNewswrp ul li a {
+    color: #fff;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+.ideaboxNewswrp ul li h2 {
+    margin: 0;
+}
+.view-all-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffd323;
+    color: red;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 @media screen and (max-width:768px) {
     .buttonsdiv{
@@ -440,6 +540,13 @@ body {
     }
     .notifications-column p {
         margin: 5vw;
+    }
+    .ideaboxNewswrp ul li{
+        scale: 0.8;
+    }
+    .ideaboxNewswrp ul li .in-content {
+        padding: 10px 0;
+        font-size: 15px;
     }
     
 }
