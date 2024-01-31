@@ -311,8 +311,8 @@ body {
     }
 
     .circle {
-        width: 90px;
-        height: 90px;
+        width: 100px;
+        height: 100px;
         margin: 20px;
         margin: bottom 10px, i !important;
     }
@@ -333,115 +333,120 @@ body {
 }
 
 /* information */
-.two-column-section {
+
+.buttonsdiv{
     display: flex;
-    justify-content: space-between;
-    margin: 00px; /* Adjust the margin as needed */
+    background-color: #043353   ;
+    width: 100%;
     height: 70vh;
+    padding: 2vw 3vw;
+    
 }
 
-.column {
-    flex: 1;
-    margin:0px; /* Adjust the margin between columns as needed */
-    background-color: #043353;
+.leftbutton{
+    flex-basis: 48%;
+    display: flex;
+    flex-direction: column;
+
 }
 
-/* Responsive styles for smaller screens */
-@media screen and (max-width: 768px) {
-    .two-column-section {
-        flex-direction: column;
-    }
-
-    .column {
-        margin-right: 0;
-        margin-bottom: 20px; /* Adjust the margin between columns for smaller screens */
-    }
-}
-/* notification */
-.two-column-section {
+.row1{
+    
     display: flex;
     justify-content: space-between;
-    margin: 0;
-    padding: 20px;
-    background-color: #043353;
-    height: auto;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-left: 60px;
-    padding-top: 10px
-}
-
-.column {
-    flex: 1;
-    margin: 0;
-    padding: 20px;
-
-}
-
-.buttons-column a {
-    display: block;
-    padding: 10px; /* Adjusted height of buttons */
-    background-color: #4169E1;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 2px solid #043353; /* Added border for buttons */
-    margin-bottom: 5px;
-    margin-right: 10px; /* Added margin between buttons */
-    transition: background-color 0.3s ease, transform 0.5s ease;
-}
-
-.buttons-column .button-row {
-    display: flex;
-    justify-content: center;
-    margin: 10%;
-    scale: 1.2;
-    height: fit-content;
-    width: fit-content;
     
 }
+.button{
+    padding: 2vw 7vw;
+    background-color: yellow;
+    margin-block: 3vw;
+    border-radius: 1vw;
+    text-decoration: none; 
+    color: #000000;  
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+    scale: 0.9;
+}
+.button:hover {
+    background-color: #e91616;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transform: scale(1.05 );
+}
 
-.buttons-column .button.full-width {
-    width: 70%;
-
+.fullwidth{
+    width: 100%;
+    background-color: beige;    
+    border-radius: 1vw;
+    padding: 2vw 4vw;
     text-align: center;
-    scale: 1.2;
-    height: fit-content;
-    width: fit-content;
-    padding: 20px;
+    margin-block: 0vw;
+    scale: 0.9;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+    
+    /* margin-top: 5vw; */
 }
-
-.buttons-column a:hover {
-    background-color: #043353;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+.fullwidth:hover {
+    background-color: #e91616;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+.fullbutton{
+    text-decoration: none;
+    color: #000000;
     
 }
+.column notifications-column{
+    flex-basis: 48%;
+    display: flex;
+    flex-direction: column;
+}
+.notifications-column p {
+    border: 1px solid #000000;
+    padding: 2vw 1vw;
+    background-color: yellow;
+    margin: 2vw;
+    border-radius: 1vw;
+    text-decoration: none; 
+    scale: 0.9;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+}
+.notifications-column p:hover{
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+@media screen and (max-width:768px) {
+    .buttonsdiv{
+        height: 100%;
+        
+    }
+    .buttonsdiv{
+        flex-direction: column;
+        
+    }
+
+    .leftbutton{
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    .row1{
+    margin: 5vw;
+    display: flex;
+    flex-direction:column ;
+    }
+    .fullwidth{
+        width: 90%;
+        margin-top: 0vh !important;
+        margin-bottom: 0vh !important;
+        margin: 2.5vh;  
+    }
+    .notifications-column p {
+        margin: 5vw;
+    }
+    
+}
+
 
 /* Added border for notifications */
-.notifications-column p {
-    border: 1px solid #4169E1;
-    padding: 20px;
-    border-radius: 5px;
-    margin: 10px;
-    height: fit-content;
-}
 
-/* Responsive styles for smaller screens */
-@media screen and (max-width: 768px) {
-    .two-column-section {
-        flex-direction: column;
-    }
-
-    .column {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-    .buttons-column .button.full-width {
-        width: 70%;
-        justify-content: center;
-        text-align: center;
-    }
-}
 /* services */
 .services-container {
     padding: 40px;
