@@ -1,0 +1,115 @@
+.contacts-container {
+    padding: 40px;
+    width: 90%;
+    transform: translateX(5.5%);
+}
+
+.contacts-container h2 {
+    color: #191919;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.contacts-container h2::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 50px;
+    height: 4px;
+    background: #040c53; /* Adjust the color */
+    transform: translateX(-50%);
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contact-card {
+    position: relative;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px; /* Adjusted font size for better readability */
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.contact-card img {
+    width: 40%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.contact-card .contact-heading {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:#040c53 ;
+    color: white; /* Adjust the color */
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.contact-card .contact-heading::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #040c53; /* Adjust the color */
+    transform: skewX(30deg);
+    z-index: -1;
+}
+
+.contact-card h3 {
+    color: #3C3633;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: #747264;
+    font-size: 14px;
+}
+
+.contact-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .contact-card {
+        width: calc(50% - 40px);
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-card {
+        width: calc(100% - 40px);
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .contact-card h3 {
+        font-size: 16px;
+    }
+
+    .contact-card p {
+        font-size: 12px;
+    }
+}

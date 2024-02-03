@@ -508,10 +508,13 @@ body {
     display: inline-block;
     padding: 10px 20px;
     background-color: #ffd323;
-    color: red;
+    color: #043353;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
+}
+.view-all-button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 @media screen and (max-width:768px) {
     .buttonsdiv{
@@ -669,6 +672,49 @@ body {
     .service-card p {
         font-size: 12px;
     }
+}
+.carousel-container {
+    max-width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%; /* Ensure each item takes at least the full width */
+    box-sizing: border-box;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    opacity: 40%;
+
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
 }
 
 /* Footer Styles */

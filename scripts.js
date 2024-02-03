@@ -38,3 +38,23 @@ function closePopup() {
     document.getElementById('popup').classList.remove('active');
     document.querySelector('.overlay').classList.remove('active');
 }
+
+let currentIndex = 0;
+        const totalSlides = document.querySelectorAll('.carousel-item').length;
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const carouselContent = document.querySelector('.carousel-content');
+            const slideWidth = document.querySelector('.carousel-item').offsetWidth;
+            const transformValue = -currentIndex * slideWidth + 'px';
+            carouselContent.style.transform = 'translateX(' + transformValue + ')';
+        }
